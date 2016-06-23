@@ -1,0 +1,23 @@
+<form name="form" ng-submit="login($event, form)" role="form">
+	<p>Hint: The using a username and password of 'test1234'.</p>
+	<div class="form-group"
+	     ng-class="{ 'has-error': form.username.$dirty && form.username.$invalid, 'has-success': form.username.$dirty && form.username.$valid, 'has-feedback': form.username.$dirty && form.username.$valid}">
+		<label for="username">Username:</label>
+		<input type="text" name="username" class="form-control" ng-model="username"
+		       ng-minlength="8" ng-maxlength="50" required/>
+		<span class="glyphicon form-control-feedback" ng-show="form.username.$valid"
+		      ng-class="{ 'glyphicon-ok': form.username.$valid}"></span>
+	</div>
+	<div class="form-group"
+	     ng-class="{ 'has-error': form.password.$dirty && form.password.$invalid, 'has-success': form.password.$dirty && form.password.$valid, 'has-feedback': form.password.$dirty && form.password.$valid}">
+		<label for="password">Password:</label>
+		<input type="password" name="password" class="form-control" ng-model="password"
+		       ng-minlength="8" ng-maxlength="50" required/>
+		<span class="glyphicon form-control-feedback" ng-show="form.password.$valid"
+		      ng-class="{ 'glyphicon-ok': form.password.$valid}"></span>
+	</div>
+	<div class="form-actions">
+		<button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">Login</button>
+	</div>
+	<div id="login-failed-msg" class="bg-danger" ng-show="loginFailed">Incorrect username or password.</div>
+</form>

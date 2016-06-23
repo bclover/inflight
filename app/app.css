@@ -1,0 +1,47 @@
+/* app css stylesheet */
+
+.navbar {
+    min-height: 70px;
+}
+
+ul.nav.navbar-nav {
+    padding-top: 12px;
+    padding-left: 50px;
+}
+
+.question {
+    color: ghostwhite;
+    padding-left: 200px;
+    margin-top: 20px;
+    font-size: 1.5em;
+    display:block;
+}
+
+.homeImage {
+    border: 2px solid lightslategray;
+    box-shadow: 5px 5px 5px lightslategray;
+}
+
+#message-ta {
+    height: 200px;
+}
+
+#login-failed-msg {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid darkred;
+}
+
+.submit-feedback {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid darkgreen;
+}
